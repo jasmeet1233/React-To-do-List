@@ -1,0 +1,20 @@
+there are no siblings, child elemts in ract, if you want to edit/delete stuff , see what are u sharing , like a deletehandler button inside a <li>, where you want to delete the <li> text, so you see the what are you sharing, usually we map the objects data, and that data is linked to an id, so we can use that.
+
+
+now functions, when you create a function, se that you dont put like, obj.name, cause functions anywhere are a separate piece, they are isolated, 
+so function ko kisse bhi link mat karr, wahi ka argument use karr, wahi ya toh ek object/variable bana, usko use karr
+
+simple rules,
+
+If you are channging somethig in the list, you have to map again and change the state again , to see the changes, So mapping again will come into picture
+
+If you are updating 2 things at once and they are connected , you can use an obj
+
+
+cut transition css
+add icons.
+drag and drop functionality to reorder lists.
+
+
+
+
