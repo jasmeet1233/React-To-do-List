@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import './App.css'
 
 const Alert = ({ alert, alertMessage }) => {
   
@@ -11,7 +10,7 @@ const Alert = ({ alert, alertMessage }) => {
     })
 
   const { message } = alert;
-  return <div className="alert-box">{message}</div>;
+  return <div className="alert-box" >{message}</div>;
 };
 
 export default Alert;

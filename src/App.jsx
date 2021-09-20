@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import Alert from "./Alert";
 import List from "./List";
-import "./App.css";
-import { FcCheckmark } from "react-icons/fc";
+import { FiCheck } from "react-icons/fi";
+import { gStar } from "./scratch";
+import './styles.css'
 
 const getLocalStorage = () => {
   const list = localStorage.getItem("todoList");
@@ -109,25 +110,35 @@ function App() {
   }, [showImportant]);
 
   return (
-    <div className="container">
-      <form onSubmit={addHandler} className="form-container">
-        <input value={inputText} onChange={inputChangeHandler} />
-        <button type="submit">{editing ? <FcCheckmark /> : "Add"}</button>
-      </form>
-      {alert.show && <Alert alert={alert} alertMessage={alertMessage} />}
-      <div className="toggle-importance">
-        <button onClick={() => setShowImportant(!showImportant)}>
-          {showImportant ? "show all" : "show Important"}
-        </button>
-      </div>
-      <List
-        todoList={todoList}
-        deleteHandler={deleteHandler}
-        editHandler={editHandler}
-        toggleImportance={toggleImportance}
-      />
-      <div className="reset">
-        <button onClick={resetHandler}>Reset</button>
+    <div className = 'main-container'>
+      <div className="container">
+        <form onSubmit={addHandler} className="form-container">
+          <input
+            value={inputText}
+            onChange={inputChangeHandler}
+            placeholder="add item"
+          />
+          <button type="submit">
+            {editing ? <FiCheck style={{ color: "white" }} size="22" /> : "Add"}
+          </button>
+        </form>
+        <div className="alert-container">
+          {alert.show && <Alert alert={alert} alertMessage={alertMessage} />}
+        </div>
+        <div className="toggle-importance">
+          <button onClick={() => setShowImportant(!showImportant)}>
+            {showImportant ? "Show all" : "Starred"}
+          </button>
+        </div>
+        <List
+          todoList={todoList}
+          deleteHandler={deleteHandler}
+          editHandler={editHandler}
+          toggleImportance={toggleImportance}
+        />
+        <div className="reset">
+          <button onClick={resetHandler}>Reset</button>
+        </div>
       </div>
     </div>
   );
