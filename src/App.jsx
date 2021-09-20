@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import Alert from "./Alert";
 import List from "./List";
 import { FiCheck } from "react-icons/fi";
-import { gStar } from "./scratch";
 import './styles.css'
 
 const getLocalStorage = () => {
