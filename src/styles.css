@@ -164,4 +164,8 @@ body {
   .list-buttons {
     width: 5.2rem;
   }
+
+  .alert-box {
+      left: 32%;
+  }
 }
