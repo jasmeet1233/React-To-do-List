@@ -2,6 +2,8 @@ import React from "react";
 import { FiStar } from "react-icons/fi";
 import { FcEmptyTrash } from "react-icons/fc";
 import { AiFillEdit } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
+
 
 const List = ({ todoList, deleteHandler, editHandler, toggleImportance }) => {
   return (
@@ -14,7 +16,7 @@ const List = ({ todoList, deleteHandler, editHandler, toggleImportance }) => {
             <div className="list-buttons">
               <div>
                 <button onClick={() => toggleImportance(id)}>
-                  <FiStar
+                  <AiFillStar
                     style={importance ? { color: "yellow" } : { color: "grey" }}
                     size={19}
                   />
@@ -25,7 +27,7 @@ const List = ({ todoList, deleteHandler, editHandler, toggleImportance }) => {
                   <FcEmptyTrash size={19} style={{ marginRight: "7px" }} />
                 </button>
                 <button onClick={() => editHandler(id)}>
-                  <AiFillEdit size={19} />
+                  <AiFillEdit size={19} style={{ color: "white" }} />
                 </button>
               </div>
             </div>
